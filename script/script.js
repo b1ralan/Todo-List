@@ -39,6 +39,7 @@ const render = function () {
       render();
     });
   });
+
   localStorage.setItem('todoData', JSON.stringify(todoData));
 };
 
@@ -53,5 +54,5 @@ todoControl.addEventListener('submit', function (event) {
 
   render();
 });
-todoData = JSON.parse(localStorage.getItem('todoData'));
+todoData = JSON.parse(localStorage.getItem('todoData')) || [];
 render();
